@@ -4,7 +4,7 @@ const Allocator = std.mem.Allocator;
 const builtin = @import("builtin");
 const build_config = @import("../build_config.zig");
 const internal_os = @import("../os/main.zig");
-const xev = @import("xev");
+const xev = @import("xev").Epoll;
 const renderer = @import("../renderer.zig");
 const gtk = if (build_config.app_runtime == .gtk) @import("../apprt/gtk/c.zig").c else void;
 
